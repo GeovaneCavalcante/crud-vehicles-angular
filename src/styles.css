@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Al Fresco";
+  src: url(assets/fonts/AlFresco-Bold.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Rebelton";
+  src: url(assets/fonts/Rebelton-Medium.ttf) format("opentype");
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Nunito", sans-serif !important;
+}
+body {
+  margin: 0;
+
+  font-family: "Nunito", sans-serif !important;
+}
+* {
+  font-family: "Nunito", sans-serif !important;
+}
+.fa,
+.far,
+.fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+
+.mat-typography h3 {
+  font: 0 1px/50px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+}

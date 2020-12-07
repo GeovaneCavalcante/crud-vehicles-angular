@@ -1,0 +1,65 @@
+<section
+  class="u-align-center u-clearfix u-grey-5 u-section-1"
+  id="carousel_6993"
+  style="min-height: 100% !important; padding-bottom: 90px"
+>
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <h3
+      class="u-custom-font u-font-montserrat u-text u-text-1"
+      style="font-size: 40px"
+    >
+      <b>Lista de Veículos</b>
+    </h3>
+    <div class="u-expanded-width mt-4 mb-1 d-flex"  *ngIf="vehicles">
+      <button mat-flat-button color="primary" [routerLink]="['/new']">Cadastrar</button>
+    </div>
+    <div class="u-expanded-width " *ngIf="vehicles">
+
+      <table mat-table [dataSource]="vehicles" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="board">
+          <th mat-header-cell *matHeaderCellDef> Placa </th>
+          <td mat-cell *matCellDef="let element"> {{element.board}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="chassis">
+          <th mat-header-cell *matHeaderCellDef> Chassi </th>
+          <td mat-cell *matCellDef="let element"> {{element.chassis}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="renavam">
+          <th mat-header-cell *matHeaderCellDef> Renavam </th>
+          <td mat-cell *matCellDef="let element"> {{element.renavam}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="model">
+          <th mat-header-cell *matHeaderCellDef> Modelo </th>
+          <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="brand">
+          <th mat-header-cell *matHeaderCellDef> Marca </th>
+          <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="year">
+          <th mat-header-cell *matHeaderCellDef> Ano </th>
+          <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> Editar </th>
+          <td mat-cell *matCellDef="let element"> <i (click)="editVehicle(element.id)" class="fas fa-edit"></i> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef> Deletar </th>
+          <td mat-cell *matCellDef="let element"> <i (click)="deleteVehicle(element)" class="fas fa-trash-alt"></i> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</section>

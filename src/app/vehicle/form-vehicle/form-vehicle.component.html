@@ -1,0 +1,46 @@
+<section
+  class="u-align-center u-clearfix u-grey-5 u-section-1"
+  id="carousel_6993"
+  style="min-height: 100% !important; padding-bottom: 90px"
+>
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <h3
+      class="u-custom-font u-font-montserrat u-text u-text-1"
+      style="font-size: 40px"
+    >
+      <b>{{ pageTitle }}</b>
+    </h3>
+    <div class="u-expanded-width mt-4 mb-1 justify-content-start" >
+      <form [formGroup]="vehicleForm" (submit)="submitForm()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Placa</mat-label>
+          <input formControlName="board" matInput placeholder="" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Chassi</mat-label>
+          <input formControlName="chassis" matInput placeholder="" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Renavam</mat-label>
+          <input formControlName="renavam" matInput placeholder="" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Modelo</mat-label>
+          <input formControlName="model" matInput placeholder="" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Marca</mat-label>
+          <input formControlName="brand" matInput placeholder="" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Ano</mat-label>
+          <input formControlName="year" matInput placeholder="" />
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="u-expanded-width d-flex justify-content-start example-full-width" >
+      <button  [disabled]="submittingForm || vehicleForm.invalid" (click)="submitForm()" mat-flat-button color="primary">Salvar</button>
+    </div>
+
+  </div>
+</section>
